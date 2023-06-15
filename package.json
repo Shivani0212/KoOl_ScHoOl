@@ -1,0 +1,30 @@
+{
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+
+  },
+  "name": "kool_school",
+  "description": "Manage various school tasks at one time on a single application in efficient way",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shivani0212/KoOl_ScHoOl.git"
+  },
+  "keywords": [],
+  "author": "Shivani",
+  "license": "NIT",
+  "bugs": {
+    "url": "https://github.com/Shivani0212/KoOl_ScHoOl/issues"
+  },
+  "homepage": "https://github.com/Shivani0212/KoOl_ScHoOl#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "express": "^4.18.2",
+    "mongoose": "^7.3.0",
+    "nodemon": "^2.0.22"
+  }
+}
+
