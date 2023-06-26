@@ -13,10 +13,11 @@ A platform that streamlines school operations and simplifies tasks, enabling sea
 
 ### The features we implemented are: 
 
-> Secure and reliable storage of student and teacher information.
-> Teacher should be able to create different classes and add various subjects to these classes.
-> Assign the role of a teacher to a user,registered students in school and assign them in class.
-> Students can participate for upcoming events ,photos posted on the website to other social media.
+* Secure and reliable storage of student and teacher information.
+* Teacher should be able to create different classes and add various subjects to these classes.
+* Head could assign teachers to these classes, create & update the timetable of these classes.
+* Head of the management can assign the role of a teacher to a user,registered students in school and assign them in class.
+* Students can participate for upcoming events ,photos posted on the website to other social media.
 
 ## Technology Stack used: 
 * MongoDB
