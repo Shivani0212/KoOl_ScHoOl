@@ -18,10 +18,7 @@ const studentSchema = new mongoose.Schema({
     type: String,
     required: [true,"password is required"]
   },
-  admin:{
-    type:Boolean,
-    default:false
-  },
+  
   fathername: {
     type: String,
     required: [true,"Father name is required"]
@@ -35,15 +32,15 @@ const studentSchema = new mongoose.Schema({
     required: [true,"Gender is required"]
   },
   date_of_birth: {
-    type: String,
+    type: Date,
     required: [true,"DOB is required"]
   },
   mobilenumber: {
-    type: Number,
+    type: String,
     required: [true,"Mobile No. is required"]
   },
   class: {
-    type: Number,
+    type: String,
     required: [true,"Class is required"]
   },
   rollnumber: {
@@ -58,8 +55,9 @@ const studentSchema = new mongoose.Schema({
     type: String,
     required: [true,"State is required"]
   },
-  pic: {
+  profile_picture: {
     type: String,
+    default: "https://res.cloudinary.com/dvfpkko1z/image/upload/v1589016219/exwm2axhjign3pmawzlv.png"
   },
 
 });

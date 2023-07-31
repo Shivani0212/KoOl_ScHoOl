@@ -1,13 +1,9 @@
 const userModel=require("../model/userModel");
-const teacherModel=require("../model/teacherModel");
-const studentModel=require("../model/studentModel");
-const subjectModel=require("../model/subjectModel");
-const noticeModel=require("../model/noticeModel");
-const feedbackModel=require("../model/feedbackModel");
+
 
 
 const bcrypt=require("bcryptjs");
-const jwt=require("jsonwebtoken")
+const jwt=require("jsonwebtoken");
 
 
 const registerController = async (req, res) => {

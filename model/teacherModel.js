@@ -18,7 +18,7 @@ const teacherSchema = new mongoose.Schema({
     type: String,
     required: [true,"password is required"]
   },
-  admin:{
+  isHeadMaster:{
     type:Boolean,
     default:false
   },
@@ -28,7 +28,7 @@ const teacherSchema = new mongoose.Schema({
     required: [true,"Gender is required"]
   },
   date_of_birth: {
-    type: String,
+    type: Date,
     required: [true,"DOB is required"]
   },
   address: {
@@ -53,6 +53,7 @@ const teacherSchema = new mongoose.Schema({
   },
   pic: {
     type: String,
+    default:"https://res.cloudinary.com/dvfpkko1z/image/upload/v1589016219/exwm2axhjign3pmawzlv.png"
   },
 
 });
