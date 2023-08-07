@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import "../styles/LoginStyles.css";
+import "../styles/SigninRegisterStyles.css";
 import { message } from "antd";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
@@ -85,7 +85,7 @@ const Register = () => {
           </label>
           <button className="submit">Register</button>
           <p className="signin">
-          Already have an acount ? <Link to="/signin">Login</Link>{" "}
+            Already have an acount ? <Link to="/signin">Login</Link>{" "}
           </p>
         </form>
       </div>

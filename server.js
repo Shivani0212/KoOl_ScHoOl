@@ -22,7 +22,7 @@ app.use(cors());
 
 
 app.post("/api/v1/user/register",registerController);
-app.post("/api/v1/user/login",loginController);
+app.post("/api/v1/user/signin",loginController);
 app.post("/api/v1/user/teacher",teacherController);
 app.post("/api/v1/user/school",schoolController);
 app.post("/api/v1/user/student",studentController);
