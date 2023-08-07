@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import "../styles/LoginStyles.css";
+import "../styles/SigninRegisterStyles.css";
 import { Form, Input, message } from "antd";
 import { useDispatch } from "react-redux";
 import { showLoading, hideLoading } from "../redux/features/alertSlice";
