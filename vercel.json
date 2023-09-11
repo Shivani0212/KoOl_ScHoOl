@@ -1,14 +1,16 @@
 {
+    "version":1,
+    "name" : "kool-school",
     "builds":[
         {
-            "src":"./server.js",
+            "src":"./app.js",
             "use":"@vercel/node"
         }
     ],
     "routes":[
         {
             "src":"/(.*)",
-            "dest":"server.js"
+            "dest":"app.js"
         }
     ]
 }
