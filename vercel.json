@@ -1,6 +1,4 @@
 {
-    "version":1,
-    "name" : "kool-school",
     "builds":[
         {
             "src":"./app.js",
