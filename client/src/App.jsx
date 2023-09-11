@@ -11,7 +11,7 @@ import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import Student from "./pages/Academics/Student";
 import Teacher from "./pages/Academics/Teacher";
-import NOtice from "./pages/Academics/NOtice";
+import NOtice from "./pages/Academics/Notice";
 import Attendance from "./pages/Academics/Attendance";
 import Calendar from "./pages/Apps/Calendar";
 import Assignment from "./pages/Apps/Assignment";
