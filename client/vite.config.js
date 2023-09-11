@@ -9,7 +9,7 @@ export default defineConfig({
     port : 5173,
     proxy: {
         '/api/v1/user': {
-            target: 'http://localhost:8082',
+            target: 'https://my-school-eta.vercel.app/',
             changeOrigin: true
         }
     }
