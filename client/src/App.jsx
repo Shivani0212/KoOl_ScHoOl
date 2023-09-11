@@ -17,6 +17,9 @@ import Calendar from "./pages/Apps/Calendar";
 import Assignment from "./pages/Apps/Assignment";
 import Support from "./pages/Settings/Support";
 import Invite from "./pages/Settings/Invite";
+import CulturalFest from "./pages/Activity/CulturalFest";
+import TechnicalFest from "./pages/Activity/TechnicalFest";
+import Sports from "./pages/Activity/Sports";
 
 const App = () => {
   const { loading } = useSelector((state) => state.alerts);
@@ -71,7 +74,7 @@ const App = () => {
               path="/activity/sports"
               element={
                 <ProtectedRoute>
-                  <Attendance />
+                  <Sports />
                 </ProtectedRoute>
               }
             />
@@ -79,7 +82,7 @@ const App = () => {
               path="/activity/cultural fest"
               element={
                 <ProtectedRoute>
-                  <Attendance />
+                  <CulturalFest />
                 </ProtectedRoute>
               }
             />
@@ -87,7 +90,7 @@ const App = () => {
               path="/activity/technical fest"
               element={
                 <ProtectedRoute>
-                  <Attendance />
+                  <TechnicalFest />
                 </ProtectedRoute>
               }
             />

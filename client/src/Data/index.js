@@ -62,7 +62,7 @@ export const feedback = [
     id: "feedback-1",
     content:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quod tenetur.",
-    name: "Herman Jensen",
+    name: "Shivani Kumari",
     title: "Founder & Leader",
     img: people01,
   },
@@ -70,7 +70,7 @@ export const feedback = [
     id: "feedback-2",
     content:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quod tenetur..",
-    name: "Steve Mark",
+    name: "Shailendra Kumar",
     title: "Founder & Leader",
     img: people02,
   },
@@ -78,8 +78,8 @@ export const feedback = [
     id: "feedback-3",
     content:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quod tenetur.",
-    name: "Kenn Gallagher",
-    title: "Founder & Leader",
+    name: "Sandeep Kumar",
+    title: "Developer",
     img: people03,
   },
 ];

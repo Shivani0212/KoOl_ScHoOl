@@ -1,8 +1,5 @@
-import React, { useState } from "react";
 import "../../styles/DashboardStyles.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { FiSettings } from "react-icons/fi";
-import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -13,15 +10,13 @@ const DashboardLayout = ({ children }) => {
   return (
     <div className="flex relative dark:bg-main-dark-bg">
       <div className="fixed right-4 bottom-4" style={{ zIndex: "1000" }}>
-        <TooltipComponent content="Settings" position="Top">
-          <button
-            type="button"
-            style={{ background: "blue", borderRadius: "50%" }}
-            className="text-3xl text-white p-3 hover:drop-shadow-xl hover:bg-light-gray"
-          >
-            <FiSettings />
-          </button>
-        </TooltipComponent>
+        <button
+          type="button"
+          style={{ background: "#03C9D7", borderRadius: "50%" }}
+          className="text-3xl text-white p-3 hover:drop-shadow-xl hover:bg-light-gray"
+        >
+          <FiSettings />
+        </button>
       </div>
       {activeMenu ? (
         <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white ">
@@ -43,6 +38,7 @@ const DashboardLayout = ({ children }) => {
           <Navbar />
         </div>
         <div>{children}</div>
+        <Footer/>
       </div>
     </div>
   );
