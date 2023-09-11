@@ -12,7 +12,7 @@
     <br />
     <a href="https://docs.google.com/document/d/1q1SIUSUNruMDMqC9w2uoD2WP5j23-uSh62IM_z4Yg5k/edit?usp=sharing"><strong>Explore the docs »</strong></a>
     <br />
-    <a href="https://github.com/Shivani0212/KoOl_ScHoOl">View Demo</a>
+    <a href="https://kool-school.vercel.app">View Demo</a>
     ·
     <a href="https://github.com/Shivani0212/KoOl_ScHoOl/issues">Report Bug</a>
     ·
