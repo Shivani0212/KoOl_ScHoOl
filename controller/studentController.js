@@ -68,9 +68,17 @@ const getAllStudentController = async (req, res) => {
     });
   }
 };
-const getAllStudentWithSpecificDataController = async (req, res) => {
+
+const getStudentByClassController = async (req, res) => {
   try {
-    const students = await studentModel.find({});
+    const schoolId = "65043762089b19e76644c234";
+    const className = await req.query.class;
+    console.log(className)
+
+    const students = await studentModel.find({
+      class: className,
+      schoolId:schoolId
+    });
     res.status(200).send({
       success: true,
       message: "Student Lists Fetched Successfully",
@@ -81,12 +89,14 @@ const getAllStudentWithSpecificDataController = async (req, res) => {
     res.status(500).send({
       success: false,
       error,
-      message: "Error in Fetching Student list",
+      message: "Error in Fetching Student list ",
     });
   }
 };
+
 module.exports = {
   studentController,
   getStudentInfoController,
   getAllStudentController,
+  getStudentByClassController,
 };

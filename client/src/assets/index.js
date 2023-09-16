@@ -16,9 +16,9 @@ import twitter from "./twitter.svg";
 import people01 from "./shivani.jpeg";
 import people02 from "./shailendra.jpeg";
 import people03 from "./sandeep.jpeg";
-import study from "./study.png"
-import study2 from "./study2.png"
-import study3 from "./study3.jpg"
+import study from "./study.png";
+import study2 from "./study2.png";
+import study3 from "./study3.jpg";
 
 export {
   logo,

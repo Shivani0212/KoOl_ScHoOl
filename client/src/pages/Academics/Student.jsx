@@ -21,14 +21,14 @@ const Student = () => {
     try {
       // Define the projection fields as an array
       const projectionFields = [
-        "firstname",
-        "lastname",
-        "rollnumber",
-        "mobilenumber",
+        "firstName",
+        "lastName",
+        "rollNumber",
+        "mobileNumber",
         "city",
         "state",
         "class",
-        "profile_picture",
+        "profilePicture",
       ];
       const res = await axios.get("/api/v1/user/getAllStudents", {
         headers: {
@@ -44,13 +44,12 @@ const Student = () => {
         // Modify the data and create new fields
         const modifiedData = res.data.data.map((student) => ({
           ...student,
-          name: student.firstname + " " + student.lastname,
+          name: student.firstName + " " + student.lastName,
           location: student.city + ", " + student.state,
         }));
 
         // Set the modified data in the state
         setStudents(modifiedData);
-        console.log(students);
       } else {
         console.log("Student data fetch error...");
       }
@@ -62,6 +61,12 @@ const Student = () => {
   useEffect(() => {
     getAllStudent();
   }, []);
+
+  const handleRowSelected = (args) => {
+    const selectedData = args.data; // Selected row data
+    console.log("Selected Student Data:", selectedData);
+  };
+  
 
   return (
     <DashboardLayout>
@@ -75,10 +80,11 @@ const Student = () => {
           pageSettings={{ pageCount: 5,pageSize:10}}
           editSettings={editing}
           toolbar={toolbarOptions}
+          rowSelected={handleRowSelected}
         >
           <ColumnsDirective>
             {studentGrid.map((item, index) => (
-              <ColumnDirective key={index} {...item} />
+              <ColumnDirective key={index} {...item}  />
             ))}
           </ColumnsDirective>
           <Inject services={[Search, Page]} />

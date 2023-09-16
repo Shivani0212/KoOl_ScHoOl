@@ -9,14 +9,15 @@ const Button = ({
   text,
   borderRadius,
   width,
-  custumFunc
+  custumFunc,
+  className
 }) => {
   return (
     <button
       type="button"
       onClick={()=>custumFunc()}
       style={{ backgroundColor: bgColor, color, borderRadius }}
-      className={` text-${size} p-3 w-${width} hover:drop-shadow-xl hover:bg-${bgHoverColor}`}
+      className={` text-${size} p-3 w-${width} hover:drop-shadow-xl hover:bg-${bgHoverColor} ${className}`}
     >
       {icon} {text}
     </button>

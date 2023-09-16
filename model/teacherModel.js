@@ -1,11 +1,16 @@
 const mongoose = require('mongoose');
 
 const teacherSchema = new mongoose.Schema({
-  firstname: {
+  schoolId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "school",
+    required: true,
+  },
+  firstName: {
     type: String,
     required: [true,"First name is required"]
   },
-  lastname: {
+  lastName: {
     type: String,
     required: [true,"Last name is required"]
   },
@@ -18,16 +23,12 @@ const teacherSchema = new mongoose.Schema({
     type: String,
     required: [true,"password is required"]
   },
-  isHeadMaster:{
-    type:Boolean,
-    default:false
-  },
-
   gender: {
     type: String,
-    required: [true,"Gender is required"]
+    enum: ["Male", "Female", "Other"], // Define possible gender options
+    required: true,
   },
-  date_of_birth: {
+  dateOfBirth: {
     type: Date,
     required: [true,"DOB is required"]
   },
@@ -39,21 +40,25 @@ const teacherSchema = new mongoose.Schema({
     type: String,
     required: [true,"Qualification is required"]
   },
-  teaching_subject: {
+  subject: {
     type: String,
     required: [true,"Subject is required"]
   },
-  preferenceclass: {
+  class: {
     type: String,
     required: [true,"Preference class is required"]
   },
-  mobilenumber: {
+  mobileNumber: {
     type: String,
     required: [true,"Mobile No. is required"]
   },
-  pic: {
+  isHeadMaster:{
+    type:Boolean,
+    default:false
+  },
+  profilePicture: {
     type: String,
-    default:"https://res.cloudinary.com/dvfpkko1z/image/upload/v1589016219/exwm2axhjign3pmawzlv.png"
+    default: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuysOxtIA-uSerDZ2bji-2l9Uec_kuPfMKLXuDDStF&s"
   },
 
 });

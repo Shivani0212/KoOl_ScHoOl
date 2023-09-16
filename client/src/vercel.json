@@ -1,5 +1,21 @@
 {
-  "rewrites":  [
-    {"source": "/(.*)", "destination": "/"}
+  "version": 2,
+  "builds": [
+    {
+      "src": "build/index.html",
+      "use": "@vercel/static-build",
+      "config": {
+        "root": "build",
+        "staticFiles": {
+          "staticPaths": "build"
+        }
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(?!api)(.*)",
+      "dest": "/build/index.html"
+    }
   ]
 }

@@ -275,7 +275,7 @@ const gridStudentProfile = (props) => (
   <div className="flex items-center gap-2">
     <img
       className="rounded-full w-10 h-10"
-      src={props.profile_picture}
+      src={props.profilePicture}
       alt="employee"
     />
     <p>{props.name}</p>
@@ -292,32 +292,32 @@ const gridEmployeeCountry = (props) => (
 export const studentGrid = [
   {
     headerText: "Name",
-    width: "150",
+    width: "200",
     template: gridStudentProfile,
     textAlign: "Center",
   },
   { field: "name", headerText: "", width: "0", textAlign: "Center" },
   {
-    field: "rollnumber",
+    field: "rollNumber",
     headerText: "Student ID",
-    width: "125",
+    width: "150",
     textAlign: "Center",
   },
   {
     field: "class",
     headerText: "Class",
-    width: "125",
+    width: "150",
     textAlign: "Center",
   },
   {
-    field: "mobilenumber",
+    field: "mobileNumber",
     headerText: "Mobile Number",
-    width: "170",
+    width: "200",
     textAlign: "Center",
   },
   {
     headerText: "Location",
-    width: "120",
+    width: "200",
     textAlign: "Center",
     template: gridEmployeeCountry,
   },
