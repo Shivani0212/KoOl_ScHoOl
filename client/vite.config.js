@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     host: true,
     proxy: {
-        '/api/v1/user': {
+        '^/api/v1/user': {
             target: 'https://kool-school-server.vercel.app/',
             changeOrigin: true,
             rewrite: (path) => path.replace('^/api/v1/user', ''),
