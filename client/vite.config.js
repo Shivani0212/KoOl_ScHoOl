@@ -6,7 +6,6 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: true,
-    port : 5173,
     proxy: {
         '/api/v1/user': {
             target: 'https://kool-school-server.vercel.app/',
