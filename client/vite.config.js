@@ -9,7 +9,8 @@ export default defineConfig({
     proxy: {
         '/api/v1/user': {
             target: 'https://kool-school-server.vercel.app/',
-            changeOrigin: true
+            changeOrigin: true,
+            rewrite: (path) => path.replace('^/api/v1/user', ''),
         }
     }
   },
