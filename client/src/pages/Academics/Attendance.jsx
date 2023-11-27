@@ -6,7 +6,7 @@ import axios from "axios";
 
 const Attendance = () => {
   const currentColor = "#03C9D7";
-  const [classList, setClassList] = useState([7, 8]);
+  const [classList, setClassList] = useState([]);
   const [selectedClass, setSelectedClass] = useState("");
   const [students, setStudents] = useState([]);
 
@@ -47,8 +47,14 @@ const Attendance = () => {
       });
 
       if (response.data.success) {
+        // Modify each student object to include an "attendance" field with a default value of null
+        const studentsWithAttendance = response.data.data.map((student) => ({
+          ...student,
+          attendance: "",
+        }));
+
         // Set the list of students in the state
-        setStudents(response.data.data);
+        setStudents(studentsWithAttendance);
       } else {
         console.log(`Failed to fetch students for class: ${className}`);
       }
@@ -66,8 +72,16 @@ const Attendance = () => {
   }, [selectedClass]);
 
   const handleAttendanceSubmit = () => {
-    // Implement the logic to submit the attendance data to the server here
-    // You can create an object with attendance data and send it to the server
+    const attendance = [];
+    students.forEach((student) => {
+      const pair = {
+        studentId: student._id,
+        isPresent: student.attendance === "Present",
+      };
+      attendance.push(pair);
+    });
+    const date = new Date();
+    console.log(date.toDateString(), attendance);
   };
 
   const handleAttendanceChange = (studentId, newAttendance) => {
@@ -121,7 +135,9 @@ const Attendance = () => {
               <tbody>
                 {students.map((student) => (
                   <tr key={student._id} className="text-center">
-                    <td className="p-2 border">{student.firstName + " " + student.lastName}</td>
+                    <td className="p-2 border">
+                      {student.firstName + " " + student.lastName}
+                    </td>
                     <td className="p-2 border">{student.rollNumber}</td>
                     <td className="p-2 border">
                       <div className="flex justify-center space-x-10">
@@ -160,7 +176,7 @@ const Attendance = () => {
               bgColor={currentColor}
               text="Submit Attendance"
               borderRadius="10px"
-              custumFunc={() => handleAttendanceSubmit}
+              custumFunc={handleAttendanceSubmit}
               className="mt-4"
             />
           </div>

@@ -10,7 +10,7 @@ const {registerController,loginController,authController} = require("./controlle
 const {schoolController,getSchoolInfoController,getAllSchoolController,getAllClassController} = require("./controller/schoolController");
 const {teacherController,getTeacherInfoController,getAllTeacherController} = require("./controller/teacherController");
 const {studentController,getStudentInfoController,getAllStudentController,getStudentByClassController} = require("./controller/studentController");
-
+const {isAttendanceTakenController} = require("./controller/classController")
 
 const authMiddleware = require("./middlewares/authMiddleware");
 
@@ -30,6 +30,7 @@ app.post("/api/v1/user/getUserData",authMiddleware,authController);
 app.get("/api/v1/user/getAllStudents",authMiddleware,getAllStudentController);
 app.get("/api/v1/user/getStudentByClass",authMiddleware,getStudentByClassController);
 app.get("/api/v1/user/getAllClass",authMiddleware,getAllClassController);
+app.get("/api/v1/user/seeAttendance",authMiddleware,isAttendanceTakenController);
 app.post("/api/v1/user/teacher",teacherController);
 app.post("/api/v1/user/school",schoolController);
 app.post("/api/v1/user/student",studentController);

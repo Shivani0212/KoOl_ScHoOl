@@ -102,6 +102,7 @@ export const stats = [
   },
 ];
 
+
 export const footerLinks = [
   {
     title: "Useful Links",
@@ -185,4 +186,5 @@ export const socialMedia = [
     link: "https://www.linkedin.com/in/shivani-kumari0212",
   },
 ];
+
 

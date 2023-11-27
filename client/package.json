@@ -11,7 +11,7 @@
     "start": "npm run dev"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^1.9.5",
+    "@reduxjs/toolkit": "^1.9.7",
     "@syncfusion/ej2": "^22.1.38",
     "@syncfusion/ej2-react-calendars": "^22.2.12",
     "@syncfusion/ej2-react-grids": "^22.2.12",
